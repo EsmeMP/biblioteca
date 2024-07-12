@@ -27,14 +27,14 @@
                     <td>{{ pais [0] }}</td>
                     <td>{{ pais [1] }}</td>
                     <td>
-                        <form action="" method="POST">
-                            <button type="button" class="btn btn-info">Editar</button>
+                        <form action="{{ url_for('update1_pais', id_pais=pais[0]) }}" method="POST">
+                            <button type="submit" class="btn btn-danger">Editar</button>
                         </form>
                 </td>
                 <td>
                     <form action="{{ url_for('delete_pais', id_pais=pais[0]) }}" method="POST">
                         <button type="submit" class="btn btn-danger">Eliminar</button>
-                </form>
+                    </form>
                 </td>
                 </tr>
             {% endfor %}
